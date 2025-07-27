@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100vw;
+            height: 100vh;
+            background-color: green;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box{
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .box h3{
+            font-size: x-large;
+        }
+        
+        .dots::after {
+  content: '...';
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 7 seconds 
+    
+    Initializing Hacking...
+    Reading your Files...
+    Password files Detected...
+    Sending all passwords and personal files to server...
+    Cleaning up...
+
+    The three dots must blink so that it looks like a real terminal
+    -->
+    <div class="container">
+        <div class="box">
+        <h3 id="first"></h3>
+        <h3 id="second"></h3>
+        <h3 id="third"></h3>
+        <h3 id="fourth"></h3>
+        <h3 id="fifth"></h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
