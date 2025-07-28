@@ -1,0 +1,38 @@
+*{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100vw;
+            height: 100vh;
+            background-color: green;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box{
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .box h3{
+            font-size: x-large;
+        }
+        
+        .dots::after {
+  content: '...';
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
